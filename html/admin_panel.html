@@ -1,14 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Адмін-панель</title>
+  <link rel="stylesheet" href="../css/admin.css">
   <link rel="stylesheet" href="../css/style.css">
-
 </head>
 <body>
-<div>
-  <p1>admin panel</p1>
-</div>
+
+<h1>Адмін-панель - Керування товарами</h1>
+
+<form id="productForm">
+  <input type="hidden" id="productId">
+
+  <label for="name">Назва товару:</label>
+  <input type="text" id="name" required>
+
+  <label for="type">Тип подарунка:</label>
+  <select id="type" required>
+    <option value="Для чоловіка">Для чоловіка</option>
+    <option value="Для жінки">Для жінки</option>
+    <option value="Дітям">Дітям</option>
+    <option value="Солодощі">Солодощі</option>
+  </select>
+
+  <label for="price">Ціна:</label>
+  <input type="number" id="price" required>
+
+  <label for="description">Опис:</label>
+  <input type="text" id="description" required>
+
+  <label for="image">Фото товару:</label>
+  <input type="file" id="image" accept="image/*">
+
+  <button type="submit">Зберегти</button>
+</form>
+
+<h2>Каталог товарів</h2>
+<div class="catalog" id="productCatalog"></div>
+
+<script src="../js/admin.js"></script>
 </body>
 </html>
